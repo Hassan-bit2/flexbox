@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Flexbox</title>
+	<style>
+		.container{
+			height: 545px;
+			width: 100%;
+			border: 3px solid black;
+			display: flex; /* initialize the container as a flex box */
+			flex-wrap: wrap;/* Used for responsivness */
+			justify-content: center; /* Centralises the content/element */
+			justify-content: space-between; /* Used to give spacing between elements */
+			justify-content: space-evenly; /* gives spaces evenly/equally */
+			align-items: center; /* Vertically centralises the elements */
+		}
+		.item{
+			width: 200px;
+			height: 200px;
+			background-color: tomato;
+			border: 3px solid blue;
+			margin: 10px;
+			padding: 6px;
+		}
+		#item-1{
+			order: 3; /* Moves the box to the last. The box with large order moves to the last */
+		}
+		#item-2{
+			flex-grow: 2;  /*increases the width of the box as the width of the page increases */
+			align-self: flex-start; /* Aligns the box at the start */
+		}
+		#item-3{
+			flex-shrink: 3; /* Reverse of flex-grow property. Decreases the width of box as page shrinks */
+			align-self: flex-end; /* Aligns the box at the end */
+		}
+	</style>
+</head>
+<body>
+	<h1>This is a FlexBox</h1>
+	<div class="container">
+		<div class="item" id="item-1">First box</div>
+		<div class="item" id="item-2">Second box</div>
+		<div class="item" id="item-3">Third box</div>
+		<!-- <div class="item" id="item-4">Fourth box</div>
+		<div class="item" id="item-5">Fifth box</div>
+		<div class="item" id="item-6">Sixth box</div> -->
+	</div>
+</body>
+</html>
